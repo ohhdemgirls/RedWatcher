@@ -1,4 +1,4 @@
-Wark
+RedWatcher
 ====
 
 A subreddit archiver.
