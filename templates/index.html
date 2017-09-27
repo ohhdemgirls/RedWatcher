@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block body %}
+
+<label><input type="checkbox" onclick="toggleAutoReload(this);" id="autoreload"/> Auto Reload</label>
+
+<table id="posts">
+	<thead>
+		<th>Date</th>
+		<th>Submission</th>
+		<th>Short link</th>
+		<th>Author</th>
+		<th>Subreddit</th>
+	</thead>
+	<tbody>
+	{% for post in obj_list %}
+		<tr>
+			<td>{{post.timestamp}}</td>
+			<td><a href="{{post.url}}">{{post.title}}</a></td>
+			<td><a href="{{post.reddit_link}}">{{post.reddit_link|replace("http://", "")}}</td>
+			<td>{% if post.author %}<a href="http://reddit.com/u/{{post.author}}">{{post.author}}</a>{% else %}<s>[deleted]</s>{% endif %}</td>
+			<td><a href="http://reddit.com/r/{{post.subreddit}}">/r/{{post.subreddit}}</a></td>
+		</tr>
+	{% endfor %}
+	</tbody>
+</table>
+
+{% endblock %}

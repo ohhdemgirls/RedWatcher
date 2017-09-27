@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}Wark{% endblock %}</title>
+	<meta charset="utf-8"/>
+	<link rel="stylesheet" type="text/css" href="/static/css/base.css"/>
+	<link rel="stylesheet" type="text/css" href="/static/css/jquery.dataTables.css"/>
+	<script type="text/javascript" src="/static/js/jquery-2.1.1.js"></script>
+	<script type="text/javascript" src="/static/js/jquery.dataTables.js"></script>
+	<script type="text/javascript">
+$(document).ready(function() {
+	$("#posts").dataTable({"bSort": false});
+	// Reparent the data info
+	$("#posts_info").appendTo("#posts_paginate");
+});
+
+// Auto reload
+var RELOAD_TIME = 30000;
+var reloading;
+
+function checkReloading() {
+	if (window.location.hash == "#autoreload") {
+		reloading=setTimeout("window.location.reload();", RELOAD_TIME);
+		document.getElementById("autoreload").checked = true;
+	}
+}
+
+function toggleAutoReload(cb) {
+	if (cb.checked) {
+		window.location.replace("#autoreload");
+		reloading = setTimeout("window.location.reload();", RELOAD_TIME);
+	} else {
+		window.location.replace("#");
+		clearTimeout(reloading);
+	}
+}
+
+window.onload = checkReloading;
+	</script>
+</head>
+<body>
+	{% block body %}
+	{% endblock %}
+</body>
+</html>

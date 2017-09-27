@@ -1,0 +1,50 @@
+/* Base css */
+
+body {
+	background-color: #eee;
+}
+
+a {
+	color: #228833;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+#search {
+	float: right;
+}
+
+#posts {
+	font-size: 1.4em;
+	margin: 0 auto 3em;
+	width: 90%;
+}
+
+#posts th {
+	padding: 0.5em 0.1em;
+	text-align: left;
+}
+
+#posts tr.even {
+	background: #eeffee;
+}
+
+#posts tr td>s { /* Deleted authors */
+	color: grey;
+	text-decoration: none;
+}
+
+#posts_info {
+	padding-left: 1em;
+}
+
+#posts_paginate {
+	background: white;
+	box-shadow: grey -1px -1px 10px;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	position: fixed;
+}
