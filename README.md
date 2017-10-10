@@ -8,8 +8,7 @@ This code is currently broken, updates will be pushed soon.
 Working Demo
 ====
 
-https://giant.gfycat.com/ColorlessPeriodicBlueshark.webm
-
+ https://the-eye.eu/tool.mp4
 
 Installation
 ------------
