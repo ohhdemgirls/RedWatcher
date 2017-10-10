@@ -5,7 +5,10 @@ A subreddit archiver.
 
 This code is currently broken, updates will be pushed soon.
 
-![Working demo](https://giant.gfycat.com/ColorlessPeriodicBlueshark.webm)
+Working Demo
+====
+
+https://giant.gfycat.com/ColorlessPeriodicBlueshark.webm
 
 
 Installation
